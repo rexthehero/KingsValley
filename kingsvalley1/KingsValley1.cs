@@ -19,7 +19,7 @@ namespace kingsvalley1
       private GraphicsDeviceManager graphics;
       private SpriteBatch spriteBatch;
       private Explorer explorer;
-        
+    
         public KingsValley1()
         {
             graphics = new GraphicsDeviceManager(this);

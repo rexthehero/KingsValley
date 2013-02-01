@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 
-namespace kingsvalley1.Explorer
+namespace kingsvalley1
 {
    public class Explorer
     {
@@ -19,13 +19,15 @@ namespace kingsvalley1.Explorer
        private Vector2 position;
        private Texture2D texture;
        private Rectangle rectangle;
-       
+       private int[] xValue = { 0, 18, 36, 54, 72, 90, 108, 126 };
+       private int i = 0;
+
        public Explorer(KingsValley1 game, Vector2 position)
        {
            this.game = game;
            this.position = position;
            this.texture = game.Content.Load<Texture2D>(@"Explorer\explorer");
-           this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y, this.texture.Width, this.texture.Height);
+           this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y, this.texture.Width / 8, this.texture.Height);
        }
        
        public void Update()
@@ -37,7 +39,7 @@ namespace kingsvalley1.Explorer
        {
            this.game.SpriteBatch.Draw(this.texture,
                                       this.rectangle,
-                                      new Rectangle(0,0,18,32),
+                                      new Rectangle(this.xValue[0],0,18,32),
                                       Color.White,
                                       0f,
                                       Vector2.Zero,
