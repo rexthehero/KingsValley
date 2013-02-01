@@ -12,22 +12,28 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace kingsvalley1
 {
-   public class ExplorerWalkRight
+   public class ExplorerWalkRight : AnimatedSprite
     {
        private Explorer explorer;
+   
 
-
-       public ExplorerWalkRight(Explorer explorer)
+       public ExplorerWalkRight(Explorer explorer) : base(explorer)
        {
+           this.i = 3;
            this.explorer = explorer;
+           
+      
+
        }
-       public void Update(GameTime gameTime)
+       public override void Update(GameTime gameTime)
        {
            this.explorer.Position += new Vector2(this.explorer.Speed, 0f);
+           base.Update(gameTime);
        }
-       public void Draw(GameTime gameTime)
-       {
+       public override void Draw(GameTime gameTime)
 
+       {
+           base.Draw(gameTime);
        }
     }
 }

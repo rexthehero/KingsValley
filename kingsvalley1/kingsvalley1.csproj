@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimatedSprite.cs" />
     <Compile Include="Explorer\Explorer.cs" />
     <Compile Include="Explorer\ExplorerWalkRight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

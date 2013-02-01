@@ -19,12 +19,9 @@ namespace kingsvalley1
        private Vector2 position;
        private Texture2D texture;
        private Rectangle rectangle;
-       private int[] xValue = { 0, 18, 36, 54, 72, 90, 108, 126 };
-       private int i = 0;
-       private float timer = 0;
        private float speed = 1;
-       private ExplorerWalkRight state;
-
+    
+       private AnimatedSprite state;
        public Vector2 Position
        {
            get { return this.position; }
@@ -38,6 +35,18 @@ namespace kingsvalley1
        {
            get { return this.speed; }
        }
+       public KingsValley1 Game
+       {
+           get { return this.game; }
+       }
+       public Texture2D Texture
+       {
+           get { return this.texture; }
+       }
+       public Rectangle Rectangle
+       {
+           get { return this.rectangle; }
+       }
        public Explorer(KingsValley1 game, Vector2 position)
        {
            this.game = game;
@@ -50,30 +59,15 @@ namespace kingsvalley1
        public void Update(GameTime gameTime)
        {
            this.state.Update(gameTime);
-           this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-           if (this.timer > 5f / 60f)
-           {
-               this.i++;
-               this.timer = 0f;
-               if (this.i > 7)
-               {
-                   this.i = 0;
+           
 
                
-           }
-       }
-           Console.WriteLine(this.timer);
+           
+       
        }
        public void Draw(GameTime gameTime)
        {
-           this.game.SpriteBatch.Draw(this.texture,
-                                      this.rectangle,
-                                      new Rectangle(this.xValue[this.i],0,18,32),
-                                      Color.White,
-                                      0f,
-                                      Vector2.Zero,
-                                      SpriteEffects.None,
-                                      0f);
+         
            this.state.Draw(gameTime);
        }
        
