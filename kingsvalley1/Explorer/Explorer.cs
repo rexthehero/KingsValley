@@ -15,7 +15,10 @@ namespace kingsvalley1.Explorer
    public class Explorer
     {
        //Fields
-
+       private KingsValley1 game;
+       private Vector2 position;
+       private Texture2D texture;
+       private
        //Properties
 
        //Construction

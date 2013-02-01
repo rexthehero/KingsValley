@@ -16,13 +16,18 @@ namespace kingsvalley1
     //Just a commit test
     public class KingsValley1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-
+      private GraphicsDeviceManager graphics;
+      private SpriteBatch spriteBatch;
+      private Explorer explorer;
+        
         public KingsValley1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+        }
+        public SpriteBatch SpriteBatch
+        {
+            get { return this.spriteBatch; }
         }
 
         protected override void Initialize()
@@ -38,7 +43,7 @@ namespace kingsvalley1
         {
             
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            this.explorer = new Explorer(this, new Vector2(100f, 300f));
         
         }
 
