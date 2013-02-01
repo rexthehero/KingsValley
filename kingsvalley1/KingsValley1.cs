@@ -13,6 +13,7 @@ using Microsoft.Xna.Framework.Storage;
 namespace kingsvalley1
 {
     //
+    //Just a commit test
     public class KingsValley1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
