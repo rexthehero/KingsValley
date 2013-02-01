@@ -60,7 +60,7 @@ namespace kingsvalley1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-         
+            this.explorer.Update(gameTime);
 
             base.Update(gameTime);
         }

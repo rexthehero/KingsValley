@@ -38,8 +38,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Explorer\explorer.png">
-      <Name>explorer</Name>
+    <Compile Include="Explorer\man.png">
+      <Name>man</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
