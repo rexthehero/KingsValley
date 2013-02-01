@@ -18,13 +18,32 @@ namespace kingsvalley1.Explorer
        private KingsValley1 game;
        private Vector2 position;
        private Texture2D texture;
-       private
-       //Properties
+       private Rectangle rectangle;
+       
+       public Explorer(KingsValley1 game, Vector2 position)
+       {
+           this.game = game;
+           this.position = position;
+           this.texture = game.Content.Load<Texture2D>(@"Explorer\explorer");
+           this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y, this.texture.Width, this.texture.Height);
+       }
+       
+       public void Update()
+       {
 
-       //Construction
-
-       //Update
-
-       //Draw
+       }
+       
+       public void Draw(GameTime gameTime)
+       {
+           this.game.SpriteBatch.Draw(this.texture,
+                                      this.rectangle,
+                                      new Rectangle(0,0,18,32),
+                                      Color.White,
+                                      0f,
+                                      Vector2.Zero,
+                                      SpriteEffects.None,
+                                      0f);
+       }
+       
     }
 }

@@ -69,6 +69,9 @@ namespace kingsvalley1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(new Color(6,6,6));
+            this.spriteBatch.Begin();
+            this.explorer.Draw(gameTime);
+            this.spriteBatch.End();
             base.Draw(gameTime);
         }
     }
