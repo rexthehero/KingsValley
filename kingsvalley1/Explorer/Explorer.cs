@@ -20,7 +20,7 @@ namespace kingsvalley1
        private Texture2D texture;
        private Rectangle rectangle;
        private float speed = 1;
-    
+    c
        private AnimatedSprite state;
        public Vector2 Position
        {
